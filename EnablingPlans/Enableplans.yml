@@ -23,54 +23,6 @@ jobs:
        creds: ${{ secrets.AZURE_CREDS }}
        enable-AzPSSession: true   
           
-    - name: Enable Defender for Servers plan
-      uses: Azure/powershell@v1
-      with:
-      # Specify the Az PowerShell script here.
-       inlineScript: 
-        Set-AzSecurityPricing -Name "virtualmachines" -PricingTier "Standard"
-       azPSVersion: latest
-    - name: Enable Sql Servers
-      uses: Azure/powershell@v1
-      with:
-      # specification of script
-        inlineScript:
-          Set-AzSecurityPricing -Name "SqlServers" -PricingTier "Standard"
-        azPSVersion: latest
-    - name: Enable App services
-      uses: Azure/powershell@v1
-      with:
-      # specification of script
-        inlineScript:
-          Set-AzSecurityPricing -Name "AppServices" -PricingTier "Standard"
-        azPSVersion: latest   
-    - name: Enable Storage accounts
-      uses: Azure/powershell@v1
-      with:
-      # specification of script
-        inlineScript:
-          Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard"
-        azPSVersion: latest  
-    - name: Enable Kubernetes Service
-      uses: Azure/powershell@v1
-      with:
-      # specification of script
-        inlineScript:
-          Set-AzSecurityPricing -Name "KubernetesService" -PricingTier "Standard"
-    - name: Enable Dns Service
-      uses: Azure/powershell@v1
-      with:
-      # specification of script
-        inlineScript:
-          Set-AzSecurityPricing -Name "Dns" -PricingTier "Standard"
-        azPSVersion: latest   
-    - name: Enable Containers Service
-      uses: Azure/powershell@v1
-      with:
-      # specification of script
-        inlineScript:
-          Set-AzSecurityPricing -Name "Containers" -PricingTier "Standard"
-        azPSVersion: latest 
     - name: Enable KeyVaults Service
       uses: Azure/powershell@v1
       with:
