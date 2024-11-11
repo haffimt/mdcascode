@@ -27,7 +27,7 @@ jobs:
       with:
       # Specify the Az PowerShell script here.
        inlineScript: 
-        Set-AzSecurityContact -Name "default1" -Email "seanwasonga@live.com" -Phone "214275-4038" -AlertAdmin -NotifyOnAlert
+        Set-AzSecurityContact -Name "default1" -Email "default"
        azPSVersion: latest  
     - name: Enable Defender for Servers plans
       uses: Azure/powershell@v1
